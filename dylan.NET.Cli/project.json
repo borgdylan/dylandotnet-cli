@@ -1,0 +1,21 @@
+{
+    "name": "dotnet-compile-dnc",
+    "version": "1.0.0-*",
+    "compilerName": "dnc",
+    "compilationOptions": {
+        "emitEntryPoint": true
+    },
+    "compileFiles": ["dylan.NET.Cli.dyl"],
+    "dependencies": {
+        "Microsoft.DotNet.Compiler.Common": "1.0.0-*"
+    },
+    "frameworks": {
+        "net451": {
+        	"dependencies": {
+        		"dylan.NET": "11.7.1.3"
+        	}
+        }
+    },
+    "scripts": {
+    }
+}
