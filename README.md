@@ -7,3 +7,5 @@ Notice
 ------
 
 There is some code that was copied over from the .NET CLI source at http://github.com/dotnet/cli and then translated into dylan.NET. Those files still attribute copyright to the .NET Foundation. The files written by me attribute copyright to me. My changes use the same license used by the .NET CLI i.e. the MIT License.
+
+The packages in ```cli-nupkgs``` are packaged versions of some .NET CLI libraries that were patched up to support mono. The full version of the .NET CLI that was patched up is available at: http://github.com/borgdylan/dotnet-cli
