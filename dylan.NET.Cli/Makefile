@@ -1,4 +1,4 @@
-PATH := $(PATH):$(shell pwd)/build
+PATH := $(shell pwd)/build:$(PATH)
 prefix:= /usr/local
 
 all:
@@ -8,7 +8,7 @@ all:
 install:
 	mkdir -p $(prefix)/lib/dylandotnet-cli
 	cp build/* $(prefix)/lib/dylandotnet-cli
-	ln -s $(prefix)/lib/dylandotnet-cli/dotnet-compile-dnc $(prefix)/bin/dotnet-compile-dnc
+	ln -sf $(prefix)/lib/dylandotnet-cli/dotnet-compile-dnc $(prefix)/bin/dotnet-compile-dnc
 
 uninstall:
 	rm $(prefix)/bin/dotnet-compile-dnc
