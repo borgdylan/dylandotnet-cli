@@ -7,8 +7,8 @@ import System.Collections.Generic
 import System.Diagnostics
 import System.IO
 import System.Linq
-import System.Runtime.InteropServices
-import System.Text
+//import System.Runtime.InteropServices
+//import System.Text
 
 import Microsoft.Dotnet.Cli.Compiler.Common
 import Microsoft.DotNet.Cli.Compiler.Common

@@ -16,6 +16,7 @@ namespace dylan.NET.Cli
         field private static IReadOnlyList<of string> resources
         field private static IReadOnlyList<of string> sources
         field private static boolean help
+        field private static boolean success
 
         method public static void DefineSyntax(var syntax as ArgumentSyntax)
             syntax::set_HandleHelp(false)
@@ -35,11 +36,14 @@ namespace dylan.NET.Cli
         end method
 
         method assembly static void ErrorH(var cm as CompilerMsg)
-
+            Console::WriteLine(i"{cm::get_File()}({cm::get_Line()}): error: {cm::get_Msg()}")
+            Console::get_Out()::Flush()
+            success = false
 		end method
 
 		method assembly static void WarnH(var cm as CompilerMsg)
-
+            Console::WriteLine(i"{cm::get_File()}({cm::get_Line()}): warning: {cm::get_Msg()}")
+            Console::get_Out()::Flush()
 		end method
 
         method private static integer Main(var args as string[])
@@ -130,21 +134,19 @@ namespace dylan.NET.Cli
 
             var w = new Action<of CompilerMsg>(WarnH)
 			var e = new Action<of CompilerMsg>(ErrorH)
-            var success as boolean = false
-
+            success = true
+			var cd = Environment::get_CurrentDirectory()
+			
             try
                 StreamUtils::add_WarnH(w)
                 StreamUtils::add_ErrorH(e)
 
                 StreamUtils::UseConsole = false
-				var cd = Environment::get_CurrentDirectory()
 				DNC.Program::Invoke(new string[] {"-inmemory", "-cd", basePath, entryFile})
-				Environment::set_CurrentDirectory(cd)
-
-                success = true
-            catch
+            catch ex as Exception
                 success = false
             finally
+            	Environment::set_CurrentDirectory(cd)
                 StreamUtils::remove_WarnH(w)
                 StreamUtils::remove_ErrorH(e)
             end try
@@ -166,6 +168,7 @@ namespace dylan.NET.Cli
                 end if
             end if
 
+            Console::get_Out()::Flush()
             return 0
         end method
 
