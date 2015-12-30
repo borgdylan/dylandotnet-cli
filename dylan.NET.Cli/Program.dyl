@@ -90,7 +90,9 @@ namespace dylan.NET.Cli
                 //embedded resources
                 if resources isnot null then
                     foreach s in resources
-                        sw::WriteLine(i"#embed \q{s}\q")
+                    	var sp = s::Split(new char[] {','})	
+                    	
+                        sw::WriteLine(i"#embed \q{sp[1]}\q = {sp[0]}")
                     end for
                 end if
 
