@@ -20,7 +20,5 @@ import DNC = dylan.NET.Compiler
 
 #include "msbuild.dyl"
 
-#include "DebugHelper.dyl"
 #include "PlatformHelper.dyl"
-#include "AnsiColorExtensions.dyl"
 #include "Program.dyl"

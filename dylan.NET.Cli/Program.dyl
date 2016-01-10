@@ -90,8 +90,8 @@ namespace dylan.NET.Cli
                 //embedded resources
                 if resources isnot null then
                     foreach s in resources
-                    	var sp = s::Split(new char[] {','})	
-                    	
+                    	var sp = s::Split(new char[] {','})
+
                         sw::WriteLine(i"#embed \q{sp[1]}\q = {sp[0]}")
                     end for
                 end if
@@ -138,7 +138,7 @@ namespace dylan.NET.Cli
 			var e = new Action<of CompilerMsg>(ErrorH)
             success = true
 			var cd = Environment::get_CurrentDirectory()
-			
+
             try
                 StreamUtils::add_WarnH(w)
                 StreamUtils::add_ErrorH(e)

@@ -66,12 +66,27 @@
           "lib/net45/Microsoft.CodeAnalysis.CSharp.dll": {}
         }
       },
+      "Microsoft.DotNet.Cli.Utils/1.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.DotNet.ProjectModel": "1.0.0",
+          "Microsoft.Extensions.PlatformAbstractions": "1.0.0-rc2-16530",
+          "System.Reflection.Metadata": "1.1.0"
+        },
+        "compile": {
+          "lib/net451/Microsoft.DotNet.Cli.Utils.dll": {}
+        },
+        "runtime": {
+          "lib/net451/Microsoft.DotNet.Cli.Utils.dll": {}
+        }
+      },
       "Microsoft.DotNet.Compiler.Common/1.0.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.CodeAnalysis.CSharp": "1.1.1",
+          "Microsoft.DotNet.Cli.Utils": "1.0.0",
           "Microsoft.DotNet.ProjectModel": "1.0.0",
-          "System.CommandLine": "0.1.0-d122115-1"
+          "System.CommandLine": "0.1.0-d123115-1"
         },
         "compile": {
           "lib/net451/Microsoft.DotNet.Compiler.Common.dll": {}
@@ -85,8 +100,8 @@
         "dependencies": {
           "Microsoft.Extensions.FileSystemGlobbing": "1.0.0-rc2-15882",
           "NuGet.Packaging": "3.3.0",
-          "runtime.linux.System.Runtime.InteropServices.RuntimeInformation": "4.0.0-rc2-23623",
-          "System.Runtime.InteropServices.RuntimeInformation": "4.0.0-rc2-23623"
+          "runtime.linux.System.Runtime.InteropServices.RuntimeInformation": "4.0.0-rc2-23707",
+          "System.Runtime.InteropServices.RuntimeInformation": "4.0.0-rc2-23707"
         },
         "compile": {
           "lib/net451/Microsoft.DotNet.ProjectModel.dll": {}
@@ -95,7 +110,7 @@
           "lib/net451/Microsoft.DotNet.ProjectModel.dll": {}
         }
       },
-      "Microsoft.Extensions.FileSystemGlobbing/1.0.0-rc2-15882": {
+      "Microsoft.Extensions.FileSystemGlobbing/1.0.0-rc2-15889": {
         "type": "package",
         "frameworkAssemblies": [
           "Microsoft.CSharp",
@@ -108,6 +123,21 @@
         },
         "runtime": {
           "lib/net451/Microsoft.Extensions.FileSystemGlobbing.dll": {}
+        }
+      },
+      "Microsoft.Extensions.PlatformAbstractions/1.0.0-rc2-16530": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core"
+        ],
+        "compile": {
+          "lib/net451/Microsoft.Extensions.PlatformAbstractions.dll": {}
+        },
+        "runtime": {
+          "lib/net451/Microsoft.Extensions.PlatformAbstractions.dll": {}
         }
       },
       "NuGet.Frameworks/3.3.0": {
@@ -219,7 +249,7 @@
           "lib/net45/NuGet.Versioning.dll": {}
         }
       },
-      "runtime.linux.System.Runtime.InteropServices.RuntimeInformation/4.0.0-rc2-23623": {
+      "runtime.linux.System.Runtime.InteropServices.RuntimeInformation/4.0.0-rc2-23707": {
         "type": "package",
         "dependencies": {
           "System.Resources.ResourceManager": "4.0.0",
@@ -261,7 +291,7 @@
           "lib/dotnet/System.Collections.Immutable.dll": {}
         }
       },
-      "System.CommandLine/0.1.0-d122115-1": {
+      "System.CommandLine/0.1.0-d123115-1": {
         "type": "package",
         "compile": {
           "lib/portable-net45+win8+wpa81+aspnetcore50/System.CommandLine.dll": {}
@@ -394,7 +424,7 @@
           "lib/net45/_._": {}
         }
       },
-      "System.Runtime.InteropServices.RuntimeInformation/4.0.0-rc2-23623": {
+      "System.Runtime.InteropServices.RuntimeInformation/4.0.0-rc2-23707": {
         "type": "package",
         "dependencies": {
           "System.Runtime": "4.0.0"
@@ -495,12 +525,27 @@
           "lib/net45/Microsoft.CodeAnalysis.CSharp.dll": {}
         }
       },
+      "Microsoft.DotNet.Cli.Utils/1.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.DotNet.ProjectModel": "1.0.0",
+          "Microsoft.Extensions.PlatformAbstractions": "1.0.0-rc2-16530",
+          "System.Reflection.Metadata": "1.1.0"
+        },
+        "compile": {
+          "lib/net451/Microsoft.DotNet.Cli.Utils.dll": {}
+        },
+        "runtime": {
+          "lib/net451/Microsoft.DotNet.Cli.Utils.dll": {}
+        }
+      },
       "Microsoft.DotNet.Compiler.Common/1.0.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.CodeAnalysis.CSharp": "1.1.1",
+          "Microsoft.DotNet.Cli.Utils": "1.0.0",
           "Microsoft.DotNet.ProjectModel": "1.0.0",
-          "System.CommandLine": "0.1.0-d122115-1"
+          "System.CommandLine": "0.1.0-d123115-1"
         },
         "compile": {
           "lib/net451/Microsoft.DotNet.Compiler.Common.dll": {}
@@ -514,8 +559,8 @@
         "dependencies": {
           "Microsoft.Extensions.FileSystemGlobbing": "1.0.0-rc2-15882",
           "NuGet.Packaging": "3.3.0",
-          "runtime.linux.System.Runtime.InteropServices.RuntimeInformation": "4.0.0-rc2-23623",
-          "System.Runtime.InteropServices.RuntimeInformation": "4.0.0-rc2-23623"
+          "runtime.linux.System.Runtime.InteropServices.RuntimeInformation": "4.0.0-rc2-23707",
+          "System.Runtime.InteropServices.RuntimeInformation": "4.0.0-rc2-23707"
         },
         "compile": {
           "lib/net451/Microsoft.DotNet.ProjectModel.dll": {}
@@ -524,7 +569,7 @@
           "lib/net451/Microsoft.DotNet.ProjectModel.dll": {}
         }
       },
-      "Microsoft.Extensions.FileSystemGlobbing/1.0.0-rc2-15882": {
+      "Microsoft.Extensions.FileSystemGlobbing/1.0.0-rc2-15889": {
         "type": "package",
         "frameworkAssemblies": [
           "Microsoft.CSharp",
@@ -537,6 +582,21 @@
         },
         "runtime": {
           "lib/net451/Microsoft.Extensions.FileSystemGlobbing.dll": {}
+        }
+      },
+      "Microsoft.Extensions.PlatformAbstractions/1.0.0-rc2-16530": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core"
+        ],
+        "compile": {
+          "lib/net451/Microsoft.Extensions.PlatformAbstractions.dll": {}
+        },
+        "runtime": {
+          "lib/net451/Microsoft.Extensions.PlatformAbstractions.dll": {}
         }
       },
       "NuGet.Frameworks/3.3.0": {
@@ -648,7 +708,7 @@
           "lib/net45/NuGet.Versioning.dll": {}
         }
       },
-      "runtime.linux.System.Runtime.InteropServices.RuntimeInformation/4.0.0-rc2-23623": {
+      "runtime.linux.System.Runtime.InteropServices.RuntimeInformation/4.0.0-rc2-23707": {
         "type": "package",
         "dependencies": {
           "System.Resources.ResourceManager": "4.0.0",
@@ -690,7 +750,7 @@
           "lib/dotnet/System.Collections.Immutable.dll": {}
         }
       },
-      "System.CommandLine/0.1.0-d122115-1": {
+      "System.CommandLine/0.1.0-d123115-1": {
         "type": "package",
         "compile": {
           "lib/portable-net45+win8+wpa81+aspnetcore50/System.CommandLine.dll": {}
@@ -823,7 +883,7 @@
           "lib/net45/_._": {}
         }
       },
-      "System.Runtime.InteropServices.RuntimeInformation/4.0.0-rc2-23623": {
+      "System.Runtime.InteropServices.RuntimeInformation/4.0.0-rc2-23707": {
         "type": "package",
         "dependencies": {
           "System.Runtime": "4.0.0"
@@ -924,12 +984,27 @@
           "lib/net45/Microsoft.CodeAnalysis.CSharp.dll": {}
         }
       },
+      "Microsoft.DotNet.Cli.Utils/1.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.DotNet.ProjectModel": "1.0.0",
+          "Microsoft.Extensions.PlatformAbstractions": "1.0.0-rc2-16530",
+          "System.Reflection.Metadata": "1.1.0"
+        },
+        "compile": {
+          "lib/net451/Microsoft.DotNet.Cli.Utils.dll": {}
+        },
+        "runtime": {
+          "lib/net451/Microsoft.DotNet.Cli.Utils.dll": {}
+        }
+      },
       "Microsoft.DotNet.Compiler.Common/1.0.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.CodeAnalysis.CSharp": "1.1.1",
+          "Microsoft.DotNet.Cli.Utils": "1.0.0",
           "Microsoft.DotNet.ProjectModel": "1.0.0",
-          "System.CommandLine": "0.1.0-d122115-1"
+          "System.CommandLine": "0.1.0-d123115-1"
         },
         "compile": {
           "lib/net451/Microsoft.DotNet.Compiler.Common.dll": {}
@@ -943,8 +1018,8 @@
         "dependencies": {
           "Microsoft.Extensions.FileSystemGlobbing": "1.0.0-rc2-15882",
           "NuGet.Packaging": "3.3.0",
-          "runtime.linux.System.Runtime.InteropServices.RuntimeInformation": "4.0.0-rc2-23623",
-          "System.Runtime.InteropServices.RuntimeInformation": "4.0.0-rc2-23623"
+          "runtime.linux.System.Runtime.InteropServices.RuntimeInformation": "4.0.0-rc2-23707",
+          "System.Runtime.InteropServices.RuntimeInformation": "4.0.0-rc2-23707"
         },
         "compile": {
           "lib/net451/Microsoft.DotNet.ProjectModel.dll": {}
@@ -953,7 +1028,7 @@
           "lib/net451/Microsoft.DotNet.ProjectModel.dll": {}
         }
       },
-      "Microsoft.Extensions.FileSystemGlobbing/1.0.0-rc2-15882": {
+      "Microsoft.Extensions.FileSystemGlobbing/1.0.0-rc2-15889": {
         "type": "package",
         "frameworkAssemblies": [
           "Microsoft.CSharp",
@@ -966,6 +1041,21 @@
         },
         "runtime": {
           "lib/net451/Microsoft.Extensions.FileSystemGlobbing.dll": {}
+        }
+      },
+      "Microsoft.Extensions.PlatformAbstractions/1.0.0-rc2-16530": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core"
+        ],
+        "compile": {
+          "lib/net451/Microsoft.Extensions.PlatformAbstractions.dll": {}
+        },
+        "runtime": {
+          "lib/net451/Microsoft.Extensions.PlatformAbstractions.dll": {}
         }
       },
       "NuGet.Frameworks/3.3.0": {
@@ -1077,7 +1167,7 @@
           "lib/net45/NuGet.Versioning.dll": {}
         }
       },
-      "runtime.linux.System.Runtime.InteropServices.RuntimeInformation/4.0.0-rc2-23623": {
+      "runtime.linux.System.Runtime.InteropServices.RuntimeInformation/4.0.0-rc2-23707": {
         "type": "package",
         "dependencies": {
           "System.Resources.ResourceManager": "4.0.0",
@@ -1119,7 +1209,7 @@
           "lib/dotnet/System.Collections.Immutable.dll": {}
         }
       },
-      "System.CommandLine/0.1.0-d122115-1": {
+      "System.CommandLine/0.1.0-d123115-1": {
         "type": "package",
         "compile": {
           "lib/portable-net45+win8+wpa81+aspnetcore50/System.CommandLine.dll": {}
@@ -1252,7 +1342,7 @@
           "lib/net45/_._": {}
         }
       },
-      "System.Runtime.InteropServices.RuntimeInformation/4.0.0-rc2-23623": {
+      "System.Runtime.InteropServices.RuntimeInformation/4.0.0-rc2-23707": {
         "type": "package",
         "dependencies": {
           "System.Runtime": "4.0.0"
@@ -1293,7 +1383,7 @@
   "libraries": {
     "dylan.NET/11.7.1.1": {
       "type": "package",
-      "sha512": "ZF/qmtCumOeeuidcAVMMHLo80kv+QvXXUHQq6IWnCCwQCzDga3tKFbQ1JzcCOKoN1hdk/vu4z4JrPxwcDczZaA==",
+      "sha512": "3/ZtyJoR6Nx0spLM6Ca18vACc8UCsGNlTHWv0khtDX6v5pS5y9fleP6tcW5/1cFS3RjcCI0BN0pvbx/5Ta+7Zg==",
       "files": [
         "dylan.NET.11.7.1.1.nupkg",
         "dylan.NET.11.7.1.1.nupkg.sha512",
@@ -1373,9 +1463,20 @@
         "ThirdPartyNotices.rtf"
       ]
     },
+    "Microsoft.DotNet.Cli.Utils/1.0.0": {
+      "type": "package",
+      "sha512": "qUwxXT5GVOCC3RRVzLJeVBiB0DIqW3y5oJRYgX8Cwg8PNuF7jg9PWyA6qk112bwFbYx9AtPbEPTzWnvPKLf2ow==",
+      "files": [
+        "lib/dnxcore50/Microsoft.DotNet.Cli.Utils.dll",
+        "lib/net451/Microsoft.DotNet.Cli.Utils.dll",
+        "Microsoft.DotNet.Cli.Utils.1.0.0.nupkg",
+        "Microsoft.DotNet.Cli.Utils.1.0.0.nupkg.sha512",
+        "Microsoft.DotNet.Cli.Utils.nuspec"
+      ]
+    },
     "Microsoft.DotNet.Compiler.Common/1.0.0": {
       "type": "package",
-      "sha512": "ifSKc1I2C7zEDUkJTy6eHA3GRHcWusjWG4T1MsBl/5W5QQctDQg4bevRSsfIMwQWD4cthEBWney0w5g0UOIqLg==",
+      "sha512": "fKEQhVA6hek+zCVolp085xwqIrLwFYjX8gcl84RLgoAjrr2ML8GliDIvuhyxgJnJLMTD3YQabUmFBrXqbq3ZbQ==",
       "files": [
         "lib/dnxcore50/Microsoft.DotNet.Compiler.Common.dll",
         "lib/dnxcore50/Microsoft.DotNet.Compiler.Common.xml",
@@ -1387,7 +1488,7 @@
     },
     "Microsoft.DotNet.ProjectModel/1.0.0": {
       "type": "package",
-      "sha512": "7lUCtKQCLWMKnVQ3HIET0DsF5pp81A7qInuO7sdFkTnr3dhWgJXKmI/KpJvA26AhCygSQS+br9eRnOsnVzWtwQ==",
+      "sha512": "Y+fZ8zKYmgeh97yraO336m7u8Z+l463TZ4pDdl9v7nc5nw6fovMHhWV20uOQEavflcfLgwBoh4LysEp3HjztoA==",
       "files": [
         "lib/dnxcore50/Microsoft.DotNet.ProjectModel.dll",
         "lib/dnxcore50/Microsoft.DotNet.ProjectModel.xml",
@@ -1398,23 +1499,35 @@
         "Microsoft.DotNet.ProjectModel.nuspec"
       ]
     },
-    "Microsoft.Extensions.FileSystemGlobbing/1.0.0-rc2-15882": {
+    "Microsoft.Extensions.FileSystemGlobbing/1.0.0-rc2-15889": {
       "type": "package",
       "serviceable": true,
-      "sha512": "nswRUE7Y5C44IASjWPM8XpVsATHuARovuJxx3ewSWbNABd1m+C5cdA6GyWjAPktVfC4j6jAnDMSW5xwBHaI1yw==",
+      "sha512": "xkzaeP83Nf5Y8q3QaacXeDNmI4ere1Ya6dHHNMSQgic5k4GycxHE1W0MojZd03Qb70X7FGNEGpQU0HmynUa/sw==",
       "files": [
         "lib/dotnet5.4/Microsoft.Extensions.FileSystemGlobbing.dll",
         "lib/dotnet5.4/Microsoft.Extensions.FileSystemGlobbing.xml",
         "lib/net451/Microsoft.Extensions.FileSystemGlobbing.dll",
         "lib/net451/Microsoft.Extensions.FileSystemGlobbing.xml",
-        "Microsoft.Extensions.FileSystemGlobbing.1.0.0-rc2-15882.nupkg",
-        "Microsoft.Extensions.FileSystemGlobbing.1.0.0-rc2-15882.nupkg.sha512",
+        "Microsoft.Extensions.FileSystemGlobbing.1.0.0-rc2-15889.nupkg",
+        "Microsoft.Extensions.FileSystemGlobbing.1.0.0-rc2-15889.nupkg.sha512",
         "Microsoft.Extensions.FileSystemGlobbing.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.PlatformAbstractions/1.0.0-rc2-16530": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "REwfq30taiaOcLVM7BnrMqp8SR9jorgs39zwJlGE5w0crUhlB1LX7izzq/qI6cI51hlDGwIo2eATehsFtj5JhA==",
+      "files": [
+        "lib/dotnet5.4/Microsoft.Extensions.PlatformAbstractions.dll",
+        "lib/net451/Microsoft.Extensions.PlatformAbstractions.dll",
+        "Microsoft.Extensions.PlatformAbstractions.1.0.0-rc2-16530.nupkg",
+        "Microsoft.Extensions.PlatformAbstractions.1.0.0-rc2-16530.nupkg.sha512",
+        "Microsoft.Extensions.PlatformAbstractions.nuspec"
       ]
     },
     "NuGet.Frameworks/3.3.0": {
       "type": "package",
-      "sha512": "kOS9FTJqFvCQR3z8C3VhnvXM4Wgi2aGDZREK+gqpnQXdCvkBPgD1PKFjGDckQLqao38DijWPppaanVGiV5Vjxw==",
+      "sha512": "X5BG+3ia7yWDdlBODuvFhj1begkc1XIxJcWwzHWmVtHE+9dP578jFMEbIDZWLU2CdDxTt8Sf4FBfenkCIndOzA==",
       "files": [
         "lib/dnxcore50/NuGet.Frameworks.dll",
         "lib/dnxcore50/NuGet.Frameworks.xml",
@@ -1453,7 +1566,7 @@
     },
     "NuGet.Packaging.Core/3.3.0": {
       "type": "package",
-      "sha512": "Ix5M5F7eYIduNIFWQeYgzSo0HKs4Y4ZrLi7TjZC/tMSL5ioiuIF56r2AwLPy98g6J2HWP6j/M6bjkO1vRgIZxA==",
+      "sha512": "EdEG/1N28o+LTBkH9NvI5xzZfKgVzDPLfcC0b87UZ2aPPA1tO+xM62DHj/31xNd/RIDbIgbENdV6a9kP08y04Q==",
       "files": [
         "lib/dnxcore50/NuGet.Packaging.Core.dll",
         "lib/dnxcore50/NuGet.Packaging.Core.xml",
@@ -1466,7 +1579,7 @@
     },
     "NuGet.Packaging.Core.Types/3.3.0": {
       "type": "package",
-      "sha512": "HjmbxDHozO9DMczF8Iyw2WPpbXHebfxFN18WBPpEabLEK9gNEAqyHS02wd5I8VS2VMBOzRljo24UIVb9yJEimA==",
+      "sha512": "r8YOEVtW0dVTFyT3Z8qHz9XMLxuqI5EsCyOlMnIWBaEZcK/5wtSWauhreZCJZY1KtmIB4sz9ofKgkvBw4E5jvg==",
       "files": [
         "lib/dnxcore50/NuGet.Packaging.Core.Types.dll",
         "lib/dnxcore50/NuGet.Packaging.Core.Types.xml",
@@ -1490,21 +1603,21 @@
         "NuGet.Versioning.nuspec"
       ]
     },
-    "runtime.linux.System.Runtime.InteropServices.RuntimeInformation/4.0.0-rc2-23623": {
+    "runtime.linux.System.Runtime.InteropServices.RuntimeInformation/4.0.0-rc2-23707": {
       "type": "package",
       "serviceable": true,
-      "sha512": "vu/EZPHTi55Wqbz1bdl0rSG7D3mt1keGP5lS8Q2Cp10MJkOcO4yb+BQsrvc6PDlEinaoo/qWoo05oT7Sz6bqUw==",
+      "sha512": "vPbdzp81xur06eB6rgqezu8B+VCUX2pD9yg82j+wELJxWAuWT8ctLgYFjOG7B8TWU5CDmZ+H3SdHVzVa+Ct4Og==",
       "files": [
         "ref/dotnet/_._",
-        "runtime.linux.System.Runtime.InteropServices.RuntimeInformation.4.0.0-rc2-23623.nupkg",
-        "runtime.linux.System.Runtime.InteropServices.RuntimeInformation.4.0.0-rc2-23623.nupkg.sha512",
+        "runtime.linux.System.Runtime.InteropServices.RuntimeInformation.4.0.0-rc2-23707.nupkg",
+        "runtime.linux.System.Runtime.InteropServices.RuntimeInformation.4.0.0-rc2-23707.nupkg.sha512",
         "runtime.linux.System.Runtime.InteropServices.RuntimeInformation.nuspec",
         "runtimes/unix/lib/dotnet5.2/System.Runtime.InteropServices.RuntimeInformation.dll"
       ]
     },
     "System.Collections/4.0.0": {
       "type": "package",
-      "sha512": "9hnfBZJ2POQlFL8rKAckFUm1bLN4JyRPBk9sb+OldHKqJ0V3Hbj2+nbLGy5jd9BFk0RqGk5iJtM1weNTMveLMQ==",
+      "sha512": "i2vsGDIEbWdHcUSNDPKZP/ZWod6o740el7mGTCy0dqbCxQh74W4QoC+klUwPEtGEFuvzJ7bJgvwJqscosVNyZQ==",
       "files": [
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
@@ -1564,20 +1677,20 @@
         "System.Collections.Immutable.nuspec"
       ]
     },
-    "System.CommandLine/0.1.0-d122115-1": {
+    "System.CommandLine/0.1.0-d123115-1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "W/JdFOh17W/SRfJcL3lsrP+fDyQwOr3qYT0TwkKI21xVe+txmEsO4nQCpIz+uBDV/JRlgE5YCtcCcMKk/+qM7A==",
+      "sha512": "VwDrVg3FSLZe+2ev5e032Jun94yiFhosTOrN5+daN4GK4UH7xRWYf+h7nsxf27grcxN4qnAoBmeL1OGROffdKw==",
       "files": [
         "lib/portable-net45+win8+wpa81+aspnetcore50/System.CommandLine.dll",
-        "System.CommandLine.0.1.0-d122115-1.nupkg",
-        "System.CommandLine.0.1.0-d122115-1.nupkg.sha512",
+        "System.CommandLine.0.1.0-d123115-1.nupkg",
+        "System.CommandLine.0.1.0-d123115-1.nupkg.sha512",
         "System.CommandLine.nuspec"
       ]
     },
     "System.Diagnostics.Debug/4.0.0": {
       "type": "package",
-      "sha512": "rXoXj+8CZLisWUUpwNb1D7x88LByF9LwvGTth5Ow0aLwLImkDRBzG03Nev19jo6FBtNwuclvVhEM9nJVBhaoYw==",
+      "sha512": "AYJsLLGDVTC/nyURjgAo7Lpye0+HuSkcQujUf+NgQVdC/C/ky5NyamQHCforHJzgqspitMMtBe8B4UBdGXy1zQ==",
       "files": [
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
@@ -1625,7 +1738,7 @@
     },
     "System.Globalization/4.0.0": {
       "type": "package",
-      "sha512": "Ea68l3ISMh5pdrcRlxQic5G1h3egbvgysKSdvPe266XlPcmkzKUdl91TQ155mlsvw1tBPgjCnw6iItzAo0x9/A==",
+      "sha512": "IBJyTo1y7ZtzzoJUA60T1XPvNTyw/wfFmjFoBFtlYfkekIOtD/AzDDIg0YdUa7eNtFEfliED2R7HdppTdU4t5A==",
       "files": [
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
@@ -1673,7 +1786,7 @@
     },
     "System.IO/4.0.0": {
       "type": "package",
-      "sha512": "PNGS1n6wxAsn/hxIRlpsSBTkLOnlYKiU8dJ1+PC0w9Nfnu7JbRt2b/pc0MYjgCh3V2ZxDa5rpwrDPbpzuyyu3g==",
+      "sha512": "MoCHQ0u5n0OMwUS8OX4Gl48qKiQziSW5cXvt82d+MmAcsLq9OL90+ihnu/aJ1h6OOYcBswrZAEuApfZha9w2lg==",
       "files": [
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
@@ -1754,7 +1867,7 @@
     },
     "System.Reflection/4.0.0": {
       "type": "package",
-      "sha512": "VSciKOmUb5AjAqvjRix5KzLJhcZt0ZhGN+c/fwJFaHxNWZswagrrENrRwfgtpgzwblChajZR2mb9XvSSOM8/Tg==",
+      "sha512": "g96Rn8XuG7y4VfxPj/jnXroRJdQ8L3iN3k3zqsuzk4k3Nq4KMXARYiIO4BLW4GwX06uQpuYwRMcAC/aF117knQ==",
       "files": [
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
@@ -1837,7 +1950,7 @@
     "System.Reflection.Metadata/1.1.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "RLIE4sSt2zngMLuqM6YmxBH99mTumtT4DNZE4+msfEaInUP5iCLQT+BHPl+2cjSAP1pdALyAjLB8RtCB+WGGWQ==",
+      "sha512": "a8VsRm/B0Ik1o5FumSMWmpwbG7cvIIajAYhzTTy9VB9XItByJDQHGZkQTIAdsvVJ6MI5O3uH/lb0izgQDlDIWA==",
       "files": [
         "lib/dotnet5.2/System.Reflection.Metadata.dll",
         "lib/dotnet5.2/System.Reflection.Metadata.xml",
@@ -1918,7 +2031,7 @@
     },
     "System.Runtime/4.0.0": {
       "type": "package",
-      "sha512": "A+xwHCqwWJ1x4iH69ErYyAx11clbav/uDgg1Y8hjV4Dyn9ZnX96dZvXxQtmb9P4Ep++YUYjZwl0GPD4KqJbVOg==",
+      "sha512": "Uq9epame8hEqJlj4KaWb67dDJvj4IM37jRFGVeFbugRdPz48bR0voyBhrbf3iSa2tAmlkg4lsa6BUOL9iwlMew==",
       "files": [
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
@@ -1966,7 +2079,7 @@
     },
     "System.Runtime.Extensions/4.0.0": {
       "type": "package",
-      "sha512": "O3oV7QFU0JrlgdKtrsVoo3HFK9lLH55KSl9NrxpNMl40BdAqdi7UQPUODlNtIPBUPyGvM5+wQzfhZw5r7YfYhQ==",
+      "sha512": "zPzwoJcA7qar/b5Ihhzfcdr3vBOR8FIg7u//Qc5mqyAriasXuMFVraBZ5vOQq5asfun9ryNEL8Z2BOlUK5QRqA==",
       "files": [
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
@@ -2058,10 +2171,10 @@
         "System.Runtime.InteropServices.nuspec"
       ]
     },
-    "System.Runtime.InteropServices.RuntimeInformation/4.0.0-rc2-23623": {
+    "System.Runtime.InteropServices.RuntimeInformation/4.0.0-rc2-23707": {
       "type": "package",
       "serviceable": true,
-      "sha512": "RlJaNB+Xi+9XrlTSFHZgY5zfC/hFpNCx6hgqyh+9QlGx1Tvv1zuRZ0WRpgQZt/CertsywJfoHd+fCx8tEurVWg==",
+      "sha512": "Xk5w7SvaawWniN3N1ooewVEexMt7wip6pg8NulFMbB0lLxtRyZv8XCz5mw8s+HuzIlhJl0htUwb1IZH3UrzS2w==",
       "files": [
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
@@ -2073,14 +2186,14 @@
         "ref/xamarinios10/_._",
         "ref/xamarinmac20/_._",
         "runtime.json",
-        "System.Runtime.InteropServices.RuntimeInformation.4.0.0-rc2-23623.nupkg",
-        "System.Runtime.InteropServices.RuntimeInformation.4.0.0-rc2-23623.nupkg.sha512",
+        "System.Runtime.InteropServices.RuntimeInformation.4.0.0-rc2-23707.nupkg",
+        "System.Runtime.InteropServices.RuntimeInformation.4.0.0-rc2-23707.nupkg.sha512",
         "System.Runtime.InteropServices.RuntimeInformation.nuspec"
       ]
     },
     "System.Text.Encoding/4.0.0": {
       "type": "package",
-      "sha512": "k4kc8Xq2Bs4x11WWtt6XMa+igtLrZAwJx1ZaB4D3/Sm4LFHSzT4mOOJIDOHa/ePyojOUtwLQdT0ywEnV5nl/9g==",
+      "sha512": "AMxFNOXpA6Ab8swULbXuJmoT2K5w6TnV3ObF5wsmEcIHQUJghoZtDVfVHb08O2wW15mOSI1i9Wg0Dx0pY13o8g==",
       "files": [
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
@@ -2128,7 +2241,7 @@
     },
     "System.Text.Encoding.Extensions/4.0.0": {
       "type": "package",
-      "sha512": "xLcdPqPA9KgmgbomWqCJqEAShcimonuIAVp2cxUqBcFP7DYh7XF9mffYrjek6Kg9RrRAIJTcyssuMOOQFVAJMw==",
+      "sha512": "FktA77+2DC0S5oRhgM569pbzFrcA45iQpYiI7+YKl68B6TfI2N5TQbXqSWlh2YXKoFXHi2RFwPMha2lxiFJZ6A==",
       "files": [
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
@@ -2176,7 +2289,7 @@
     },
     "System.Threading/4.0.0": {
       "type": "package",
-      "sha512": "ZsZ8i38K9t14aLQJ+19WUFoS7fVA/3QLHxgE1O6+xICYtl/VzUv17NCWFCNkBn6pfsIlC8XOjRQqiKzjdUGotw==",
+      "sha512": "H6O/9gUrjPDNYanh/7OFGAZHjVXvEuITD0RcnjfvIV04HOGrOPqUBU0kmz9RIX/7YGgCQn1o1S2DX6Cuv8kVGQ==",
       "files": [
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
@@ -2225,7 +2338,8 @@
   },
   "projectFileDependencyGroups": {
     "": [
-      "Microsoft.DotNet.Compiler.Common >= 1.0.0-*"
+      "Microsoft.DotNet.Compiler.Common >= 1.0.0-*",
+      "Microsoft.DotNet.Cli.Utils >= 1.0.0-*"
     ],
     ".NETFramework,Version=v4.5.1": [
       "dylan.NET >= 11.7.1.1"

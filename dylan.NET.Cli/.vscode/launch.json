@@ -1,0 +1,15 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Launch",
+			"type": "mono",
+			"request": "launch",
+			"program": "bin/Debug/net451/dotnet-compile-dnc.exe",
+			"args": [],
+			"cwd": ".",
+			"runtimeExecutable": null,
+			"env": {}
+		}
+	]
+}
