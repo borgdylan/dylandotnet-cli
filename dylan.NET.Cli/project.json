@@ -8,12 +8,13 @@
     "compileFiles": ["dylan.NET.Cli.dyl"],
     "dependencies": {
         "Microsoft.DotNet.Compiler.Common": "1.0.0-*",
-        "Microsoft.DotNet.Cli.Utils": "1.0.0-*"
+        "Microsoft.DotNet.Cli.Utils": "1.0.0-*",
+        "System.CommandLine": "0.1.0-e160119-1"
     },
     "frameworks": {
         "net451": {
         	"dependencies": {
-        		"dylan.NET": "11.7.1.1"
+        		"dylan.NET": "11.7.1.3"
         	}
         }
     },
