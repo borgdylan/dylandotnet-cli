@@ -2,7 +2,7 @@
   "locked": false,
   "version": 2,
   "targets": {
-    ".NETFramework,Version=v4.5.1": {
+    ".NETFramework,Version=v4.6.1": {
       "dylan.NET/11.7.1.3": {
         "type": "package",
         "compile": {
@@ -409,7 +409,7 @@
         }
       }
     },
-    ".NETFramework,Version=v4.5.1/ubuntu.15.10-x86": {
+    ".NETFramework,Version=v4.6.1/ubuntu.15.10-x86": {
       "dylan.NET/11.7.1.3": {
         "type": "package",
         "compile": {
@@ -1497,7 +1497,7 @@
       "Microsoft.DotNet.Compiler.Common >= 1.0.0-*",
       "System.CommandLine >= 0.1.0-e160119-1"
     ],
-    ".NETFramework,Version=v4.5.1": [
+    ".NETFramework,Version=v4.6.1": [
       "dylan.NET >= 11.7.1.3"
     ]
   }

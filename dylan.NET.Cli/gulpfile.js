@@ -1,4 +1,3 @@
-/// <reference path="typings/node/node.d.ts"/>
 var gulp = require('gulp');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
@@ -7,9 +6,9 @@ var cssmin = require('gulp-cssmin');
 var util  = require('util'),
     spawn = require('child_process').spawn;
 var stripAnsi = require('strip-ansi');
-	
+
 gulp.task('run', function(cb) {
-	var ls = spawn('sh', ['-c', 'dotnet run -f net451']);
+	var ls = spawn('sh', ['-c', 'dotnet run -f net461']);
 	ls.stdout.on('data', function (data) {
 		process.stdout.write(data);
 	});

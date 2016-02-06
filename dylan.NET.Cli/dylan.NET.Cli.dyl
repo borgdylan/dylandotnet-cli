@@ -4,13 +4,12 @@
 import System
 import System.CommandLine
 import System.Collections.Generic
-import System.Diagnostics
+//import System.Diagnostics
 import System.IO
-import System.Linq
+//import System.Linq
 //import System.Runtime.InteropServices
 //import System.Text
 
-import Microsoft.Dotnet.Cli.Compiler.Common
 import Microsoft.DotNet.Cli.Compiler.Common
 import Microsoft.DotNet.Cli.Utils
 import Microsoft.DotNet.ProjectModel
