@@ -155,7 +155,7 @@ namespace dylan.NET.Cli
 
             if success then
                 outputName = outputName::Trim(new char[] {c'\q'})
-                
+
                 //write assembly to disk
                 var asm = MemoryFS::GetFile(effectiveName + #ternary {emitExe ? ".exe" , ".dll"})
                 using fs = File::OpenWrite(outputName)
@@ -166,9 +166,7 @@ namespace dylan.NET.Cli
                 //load debug symbols if they got made
                 var pdbPath = Path::Combine(basePath, effectiveName + #ternary {emitExe ? PlatformHelper::get_ExeDebugExtension() , PlatformHelper::get_DebugExtension()})
                 var pdbDestPath = Path::ChangeExtension(outputName, #ternary {emitExe ? PlatformHelper::get_ExeDebugExtension() , PlatformHelper::get_DebugExtension()})
-                
-                Console::WriteLine(i"{pdbPath} ; {pdbDestPath}")
-                
+
                 if !#expr(commonOptions::get_Optimize() ?? false) andalso File::Exists(pdbPath) then
                     File::Delete(pdbDestPath)
                     File::Move(pdbPath, pdbDestPath)
