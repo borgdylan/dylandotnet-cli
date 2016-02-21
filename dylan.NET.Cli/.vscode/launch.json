@@ -5,7 +5,7 @@
 			"name": "Launch",
 			"type": "mono",
 			"request": "launch",
-			"program": "bin/Debug/net451/dotnet-compile-dnc.exe",
+			"program": "bin/Debug/net461/dotnet-compile-dnc.exe",
 			"args": [],
 			"cwd": ".",
 			"runtimeExecutable": null,

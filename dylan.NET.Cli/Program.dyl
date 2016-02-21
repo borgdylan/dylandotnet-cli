@@ -71,7 +71,7 @@ namespace dylan.NET.Cli
             end if
 
             var entryFile = sources::get_Item(0)
-            var basePath = Path::GetDirectoryName(entryFile)
+            var basePath = Path::GetDirectoryName(entryFile::Trim(new char[] {c'\q'}))
             var effectiveName as string = null
             var emitExe as boolean = false
 
@@ -79,7 +79,7 @@ namespace dylan.NET.Cli
 
                 //referenced dlls
                 foreach s in references
-                    sw::WriteLine(i"#refasm \q{s}\q")
+                    sw::WriteLine(i"#refasm {s}")
                 end for
 
                 //defines
@@ -135,16 +135,16 @@ namespace dylan.NET.Cli
             end using
 
             var w = new Action<of CompilerMsg>(WarnH)
-			var e = new Action<of CompilerMsg>(ErrorH)
+	    var e = new Action<of CompilerMsg>(ErrorH)
             success = true
-			var cd = Environment::get_CurrentDirectory()
+            var cd = Environment::get_CurrentDirectory()
 
             try
                 StreamUtils::add_WarnH(w)
                 StreamUtils::add_ErrorH(e)
 
                 StreamUtils::UseConsole = false
-				DNC.Program::Invoke(new string[] {"-inmemory", "-cd", basePath, entryFile})
+		DNC.Program::Invoke(new string[] {"-inmemory", "-cd", basePath, entryFile})
             catch ex as Exception
                 success = false
             finally
@@ -154,6 +154,8 @@ namespace dylan.NET.Cli
             end try
 
             if success then
+                outputName = outputName::Trim(new char[] {c'\q'})
+                
                 //write assembly to disk
                 var asm = MemoryFS::GetFile(effectiveName + #ternary {emitExe ? ".exe" , ".dll"})
                 using fs = File::OpenWrite(outputName)
@@ -164,6 +166,9 @@ namespace dylan.NET.Cli
                 //load debug symbols if they got made
                 var pdbPath = Path::Combine(basePath, effectiveName + #ternary {emitExe ? PlatformHelper::get_ExeDebugExtension() , PlatformHelper::get_DebugExtension()})
                 var pdbDestPath = Path::ChangeExtension(outputName, #ternary {emitExe ? PlatformHelper::get_ExeDebugExtension() , PlatformHelper::get_DebugExtension()})
+                
+                Console::WriteLine(i"{pdbPath} ; {pdbDestPath}")
+                
                 if !#expr(commonOptions::get_Optimize() ?? false) andalso File::Exists(pdbPath) then
                     File::Delete(pdbDestPath)
                     File::Move(pdbPath, pdbDestPath)
