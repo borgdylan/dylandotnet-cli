@@ -3,7 +3,7 @@ prefix:= /usr/local
 
 all:
 	-dotnet restore --disable-parallel
-	dotnet publish --output build
+	-dotnet publish --output build
 
 install:
 	mkdir -p $(prefix)/lib/dylandotnet-cli

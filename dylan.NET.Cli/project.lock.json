@@ -3,7 +3,7 @@
   "version": 2,
   "targets": {
     ".NETFramework,Version=v4.6.1": {
-      "dylan.NET/11.7.1.3": {
+      "dylan.NET/11.8.1.1": {
         "type": "package",
         "compile": {
           "lib/net40/C5.dll": {},
@@ -110,7 +110,7 @@
           "lib/net451/Microsoft.DotNet.ProjectModel.dll": {}
         }
       },
-      "Microsoft.Extensions.FileSystemGlobbing/1.0.0-rc2-15994": {
+      "Microsoft.Extensions.FileSystemGlobbing/1.0.0-rc2-15985": {
         "type": "package",
         "frameworkAssemblies": [
           "Microsoft.CSharp",
@@ -125,7 +125,7 @@
           "lib/net451/Microsoft.Extensions.FileSystemGlobbing.dll": {}
         }
       },
-      "Microsoft.Extensions.PlatformAbstractions/1.0.0-rc2-16535": {
+      "Microsoft.Extensions.PlatformAbstractions/1.0.0-rc2-16530": {
         "type": "package",
         "frameworkAssemblies": [
           "Microsoft.CSharp",
@@ -276,6 +276,12 @@
         },
         "compile": {
           "ref/dotnet/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/unix/lib/dotnet5.2/System.Runtime.InteropServices.RuntimeInformation.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          }
         }
       },
       "System.Collections/4.0.0": {
@@ -410,7 +416,7 @@
       }
     },
     ".NETFramework,Version=v4.6.1/ubuntu.15.10-x64": {
-      "dylan.NET/11.7.1.3": {
+      "dylan.NET/11.8.1.1": {
         "type": "package",
         "compile": {
           "lib/net40/C5.dll": {},
@@ -517,7 +523,7 @@
           "lib/net451/Microsoft.DotNet.ProjectModel.dll": {}
         }
       },
-      "Microsoft.Extensions.FileSystemGlobbing/1.0.0-rc2-15994": {
+      "Microsoft.Extensions.FileSystemGlobbing/1.0.0-rc2-15985": {
         "type": "package",
         "frameworkAssemblies": [
           "Microsoft.CSharp",
@@ -532,7 +538,7 @@
           "lib/net451/Microsoft.Extensions.FileSystemGlobbing.dll": {}
         }
       },
-      "Microsoft.Extensions.PlatformAbstractions/1.0.0-rc2-16535": {
+      "Microsoft.Extensions.PlatformAbstractions/1.0.0-rc2-16530": {
         "type": "package",
         "frameworkAssemblies": [
           "Microsoft.CSharp",
@@ -818,11 +824,11 @@
     }
   },
   "libraries": {
-    "dylan.NET/11.7.1.3": {
-      "sha512": "n2ljl0l7TfQ9qihdEGuLHnR1OgvfKVUmOGteJJz56CL0vC9RxsGhMpwRNBvj/faRHHexa38PoQhcFy7NWfXz2Q==",
+    "dylan.NET/11.8.1.1": {
+      "sha512": "Eh0d8VLvzM6knAAmYzVeC5BXBwo6ruQONdeSlEFQbqOxswIGGHUMkNoTVvfO/zGN59/lJdgNXz2jrVvJf5n7bw==",
       "type": "package",
       "files": [
-        "dylan.NET.11.7.1.3.nupkg.sha512",
+        "dylan.NET.11.8.1.1.nupkg.sha512",
         "dylan.NET.nuspec",
         "lib/net40/C5.dll",
         "lib/net40/Extra.Tasks.dll",
@@ -929,21 +935,21 @@
         "lib/net451/Microsoft.DotNet.ProjectModel.xml"
       ]
     },
-    "Microsoft.Extensions.FileSystemGlobbing/1.0.0-rc2-15994": {
-      "sha512": "SJoK6bKhmZjntgQhasV/hYXg6rhFSuz0IbvNY+vQvM5UQzcIXsA3eqplt3HfSQBjDdkkyuqsRNvWSOlf/xUOUw==",
+    "Microsoft.Extensions.FileSystemGlobbing/1.0.0-rc2-15985": {
+      "sha512": "HVXPwG5cmWTiFMHLriiv0Z3s6s9eTkTIy20bJb+nFq57UNQZl0+f6PuE+qCNiQWttuGiJiyaF3/wER/REsgzIg==",
       "type": "package",
       "files": [
-        "Microsoft.Extensions.FileSystemGlobbing.1.0.0-rc2-15994.nupkg.sha512",
+        "Microsoft.Extensions.FileSystemGlobbing.1.0.0-rc2-15985.nupkg.sha512",
         "Microsoft.Extensions.FileSystemGlobbing.nuspec",
         "lib/dotnet5.4/Microsoft.Extensions.FileSystemGlobbing.dll",
         "lib/net451/Microsoft.Extensions.FileSystemGlobbing.dll"
       ]
     },
-    "Microsoft.Extensions.PlatformAbstractions/1.0.0-rc2-16535": {
-      "sha512": "Cogii6+iHRgEVsTUw4wRZHU9Dhh83LErfrgAjve9UzolyndSwpYAhX9pRb/hsncRKxp2pbvm01eDkyyDmi8lTA==",
+    "Microsoft.Extensions.PlatformAbstractions/1.0.0-rc2-16530": {
+      "sha512": "REwfq30taiaOcLVM7BnrMqp8SR9jorgs39zwJlGE5w0crUhlB1LX7izzq/qI6cI51hlDGwIo2eATehsFtj5JhA==",
       "type": "package",
       "files": [
-        "Microsoft.Extensions.PlatformAbstractions.1.0.0-rc2-16535.nupkg.sha512",
+        "Microsoft.Extensions.PlatformAbstractions.1.0.0-rc2-16530.nupkg.sha512",
         "Microsoft.Extensions.PlatformAbstractions.nuspec",
         "lib/dotnet5.4/Microsoft.Extensions.PlatformAbstractions.dll",
         "lib/net451/Microsoft.Extensions.PlatformAbstractions.dll"
@@ -1498,7 +1504,9 @@
       "System.CommandLine >= 0.1.0-e160119-1"
     ],
     ".NETFramework,Version=v4.6.1": [
-      "dylan.NET >= 11.7.1.3"
+      "dylan.NET >= 11.8.1.1"
     ]
-  }
+  },
+  "tools": {},
+  "projectFileToolGroups": {}
 }

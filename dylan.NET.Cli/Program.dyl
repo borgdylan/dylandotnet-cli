@@ -12,6 +12,7 @@ namespace dylan.NET.Cli
         field private static string tempOutDir
         field private static string helpText
         field private static string outputName
+        field private static string assemblyName
         field private static IReadOnlyList<of string> references
         field private static IReadOnlyList<of string> resources
         field private static IReadOnlyList<of string> sources
@@ -27,6 +28,7 @@ namespace dylan.NET.Cli
 
             syntax::DefineOption("temp-output", ref tempOutDir, "Compilation temporary directory")
             syntax::DefineOption("out", ref outputName, "Name of the output assembly")
+            syntax::DefineOption("output-name", ref assemblyName, "Assembly Name of the output assembly")
             syntax::DefineOptionList("reference", ref references, "Path to a compiler metadata reference")
             syntax::DefineOptionList("resource", ref resources, "Resources to embed")
             syntax::DefineOption("h|help", ref help, "Help for compile native.")
@@ -39,12 +41,12 @@ namespace dylan.NET.Cli
             Console::WriteLine(i"{cm::get_File()}({cm::get_Line()}): error: {cm::get_Msg()}")
             Console::get_Out()::Flush()
             success = false
-		end method
+        end method
 
-		method assembly static void WarnH(var cm as CompilerMsg)
+        method assembly static void WarnH(var cm as CompilerMsg)
             Console::WriteLine(i"{cm::get_File()}({cm::get_Line()}): warning: {cm::get_Msg()}")
             Console::get_Out()::Flush()
-		end method
+        end method
 
         method private static integer Main(var args as string[])
             DebugHelper::HandleDebugSwitch(ref args)
@@ -79,7 +81,7 @@ namespace dylan.NET.Cli
 
                 //referenced dlls
                 foreach s in references
-                    sw::WriteLine(i"#refasm {s}")
+                    sw::WriteLine(i"#refasm \q{s}\q")
                 end for
 
                 //defines
@@ -90,9 +92,10 @@ namespace dylan.NET.Cli
                 //embedded resources
                 if resources isnot null then
                     foreach s in resources
-                    	var sp = s::Split(new char[] {','})
-
-                        sw::WriteLine(i"#embed \q{sp[1]}\q = {sp[0]}")
+                        var sp = s::Split(new char[] {','})
+                        var sp1 = sp[1]::Trim(new char[] { c'\q' })
+                        var sp0 = sp[0]::Trim(new char[] { c'\q' })
+                        sw::WriteLine(i"#embed \q{sp1}\q = \q{sp0}\q")
                     end for
                 end if
 
@@ -121,7 +124,7 @@ namespace dylan.NET.Cli
                 //write out the TFM i.e. target framework moniker
                 sw::WriteLine(i"[assembly: System.Runtime.Versioning.TargetFramework(\q{assemblyInfoOptions::get_TargetFramework()}\q)]")
 
-                effectiveName = Path::GetFileNameWithoutExtension(outputName)::Replace("-", "_")
+                effectiveName = assemblyName::Replace("-", "_")
                 emitExe = commonOptions::get_EmitEntryPoint() ?? false
 
                 //define assembly accordignly
@@ -135,7 +138,7 @@ namespace dylan.NET.Cli
             end using
 
             var w = new Action<of CompilerMsg>(WarnH)
-	    var e = new Action<of CompilerMsg>(ErrorH)
+            var e = new Action<of CompilerMsg>(ErrorH)
             success = true
             var cd = Environment::get_CurrentDirectory()
 
@@ -144,11 +147,11 @@ namespace dylan.NET.Cli
                 StreamUtils::add_ErrorH(e)
 
                 StreamUtils::UseConsole = false
-		DNC.Program::Invoke(new string[] {"-inmemory", "-cd", basePath, entryFile})
+                DNC.Program::Invoke(new string[] {"-inmemory", "-cd", basePath, entryFile})
             catch ex as Exception
                 success = false
             finally
-            	Environment::set_CurrentDirectory(cd)
+                Environment::set_CurrentDirectory(cd)
                 StreamUtils::remove_WarnH(w)
                 StreamUtils::remove_ErrorH(e)
             end try
@@ -170,6 +173,11 @@ namespace dylan.NET.Cli
                 if !#expr(commonOptions::get_Optimize() ?? false) andalso File::Exists(pdbPath) then
                     File::Delete(pdbDestPath)
                     File::Move(pdbPath, pdbDestPath)
+                    var pdb2 = pdbDestPath::Replace(".exe.mdb", ".pdb")::Replace(".dll.mdb", ".pdb")
+                    if pdbDestPath != pdb2 then
+                        File::Delete(pdb2)
+                        File::Copy(pdbDestPath, pdb2)
+                    end if
                 end if
             end if
 

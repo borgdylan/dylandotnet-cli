@@ -5,11 +5,20 @@
 			"name": "Launch",
 			"type": "mono",
 			"request": "launch",
-			"program": "bin/Debug/net461/dotnet-compile-dnc.exe",
+			"program": "${workspaceRoot}/bin/Debug/net461/ubuntu.15.10-x64/dotnet-compile-dnc.exe",
 			"args": [],
-			"cwd": ".",
+			"cwd": "${workspaceRoot}",
+			"preLaunchTask": "",
 			"runtimeExecutable": null,
-			"env": {}
+			"env": {},
+			"externalConsole": false
+		},
+		{
+			"name": "Attach",
+			"type": "mono",
+			"request": "attach",
+			"address": "localhost",
+			"port": 38816
 		}
 	]
 }
