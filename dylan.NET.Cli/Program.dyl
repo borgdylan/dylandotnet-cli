@@ -176,7 +176,7 @@ namespace dylan.NET.Cli
                     var pdb2 = pdbDestPath::Replace(".exe.mdb", ".pdb")::Replace(".dll.mdb", ".pdb")
                     if pdbDestPath != pdb2 then
                         File::Delete(pdb2)
-                        File::Copy(pdbDestPath, pdb2)
+                        //File::Copy(pdbDestPath, pdb2)
                     end if
                 end if
             end if
