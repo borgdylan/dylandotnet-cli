@@ -168,7 +168,7 @@ namespace dylan.NET.Cli
 
                 //load debug symbols if they got made
                 var pdbPath = Path::Combine(basePath, effectiveName + #ternary {emitExe ? PlatformHelper::get_ExeDebugExtension() , PlatformHelper::get_DebugExtension()})
-                var pdbDestPath = Path::ChangeExtension(outputName, #ternary {emitExe ? PlatformHelper::get_ExeDebugExtension() , PlatformHelper::get_DebugExtension()})
+                var pdbDestPath = Path::ChangeExtension(outputName, PlatformHelper::GetDebugExtension(outputName))
 
                 if !#expr(commonOptions::get_Optimize() ?? false) andalso File::Exists(pdbPath) then
                     File::Delete(pdbDestPath)

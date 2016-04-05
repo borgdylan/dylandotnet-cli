@@ -8,7 +8,7 @@
 			"program": "${workspaceRoot}/bin/Debug/net461/ubuntu.15.10-x64/dotnet-compile-dnc.exe",
 			"args": [],
 			"cwd": "${workspaceRoot}",
-			"preLaunchTask": "",
+			"preLaunchTask": "build",
 			"runtimeExecutable": null,
 			"env": {},
 			"externalConsole": false

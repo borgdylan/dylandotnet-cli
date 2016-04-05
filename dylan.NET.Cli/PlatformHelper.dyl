@@ -22,6 +22,10 @@ namespace dylan.NET.Cli
         		return #ternary {get_IsMono() ? ".exe.mdb" , ".pdb"}
         	end get
         end property
+        
+        method public static string GetDebugExtension(var path as string)
+                return #ternary {get_IsMono() ? i"{Path::GetExtension(path)}.mdb" , ".pdb"}
+        end method
 
     end class
 
