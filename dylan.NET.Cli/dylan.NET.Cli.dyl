@@ -10,9 +10,9 @@ import System.IO
 //import System.Runtime.InteropServices
 //import System.Text
 
-import Microsoft.DotNet.Cli.Compiler.Common
+//import Microsoft.DotNet.Cli.Compiler.Common
 import Microsoft.DotNet.Cli.Utils
-import Microsoft.DotNet.ProjectModel
+//import Microsoft.DotNet.ProjectModel
 
 import dylan.NET.Utils
 import DNC = dylan.NET.Compiler

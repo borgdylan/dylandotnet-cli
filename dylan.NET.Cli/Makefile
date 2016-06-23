@@ -2,7 +2,7 @@ PATH := $(shell pwd)/build:$(PATH)
 prefix:= /usr/local
 
 all:
-	-dotnet restore --disable-parallel
+	-dotnet restore
 	-dotnet -v publish --output build
 
 install:

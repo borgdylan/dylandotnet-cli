@@ -1,20 +1,22 @@
 {
     "name": "dotnet-compile-dnc",
     "version": "1.0.0-*",
-    "compilerName": "dnc",
-    "compilationOptions": {
-        "emitEntryPoint": true
+    "buildOptions": {
+        "emitEntryPoint": true,
+        "compilerName": "dnc",
+        "compile": ["dylan.NET.Cli.dyl"]
     },
-    "compileFiles": ["dylan.NET.Cli.dyl"],
     "dependencies": {
         "Microsoft.DotNet.Compiler.Common": "1.0.0-*",
         "Microsoft.DotNet.Cli.Utils": "1.0.0-*",
-        "System.CommandLine": "0.1.0-e160119-1"
+        "Microsoft.DotNet.Files": "1.0.0-*",
+        "Microsoft.DotNet.InternalAbstractions": "1.0.1-*",
+        "System.CommandLine": "0.1.0-*"
     },
     "frameworks": {
         "net461": {
         	"dependencies": {
-        		"dylan.NET": "11.8.1.1"
+        		"dylan.NET": "11.8.2.2"
         	}
         }
     },
