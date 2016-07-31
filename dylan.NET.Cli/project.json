@@ -16,7 +16,7 @@
     "frameworks": {
         "net461": {
         	"dependencies": {
-        		"dylan.NET": "11.8.2.3"
+        		"dylan.NET": "11.8.2.4"
         	}
         }
     },
