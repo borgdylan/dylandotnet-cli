@@ -13,18 +13,21 @@ namespace dylan.NET.Cli
 
         property public static string DebugExtension
         	get
-        		return #ternary {get_IsMono() ? ".dll.mdb" , ".pdb"}
+        		//return #ternary {get_IsMono() ? ".dll.mdb" , ".pdb"}
+        		return ".pdb"
         	end get
         end property
 
         property public static string ExeDebugExtension
         	get
-        		return #ternary {get_IsMono() ? ".exe.mdb" , ".pdb"}
+        		//return #ternary {get_IsMono() ? ".exe.mdb" , ".pdb"}
+        		return ".pdb"
         	end get
         end property
         
         method public static string GetDebugExtension(var path as string)
-                return #ternary {get_IsMono() ? i"{Path::GetExtension(path)}.mdb" , ".pdb"}
+            //return #ternary {get_IsMono() ? i"{Path::GetExtension(path)}.mdb" , ".pdb"}
+            return ".pdb"
         end method
 
     end class

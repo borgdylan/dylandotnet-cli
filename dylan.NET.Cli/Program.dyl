@@ -160,7 +160,7 @@ namespace dylan.NET.Cli
                 StreamUtils::add_ErrorH(e)
 
                 StreamUtils::UseConsole = false
-                DNC.Program::Invoke(new string[] {"-inmemory", "-cd", basePath, entryFile})
+                DNC.Program::Invoke(new string[] {"-cd", basePath, entryFile})
             catch ex as Exception
                 success = false
             finally
@@ -173,12 +173,10 @@ namespace dylan.NET.Cli
                 outputName = outputName::Trim(new char[] {c'\q'})
 
                 //write assembly to disk
-                var asm = MemoryFS::GetFile(effectiveName + #ternary {emitExe ? ".exe" , ".dll"})
-                using fs = File::OpenWrite(outputName)
-                    asm::CopyTo(fs)
-                end using
-                asm::Dispose()
-
+                var asm = Path::Combine(basePath, effectiveName + #ternary {emitExe ? ".exe" , ".dll"})
+                File::Delete(outputName)
+                File::Move(asm, outputName)
+                
                 //load debug symbols if they got made
                 var pdbPath = Path::Combine(basePath, effectiveName + #ternary {emitExe ? PlatformHelper::get_ExeDebugExtension() , PlatformHelper::get_DebugExtension()})
                 var pdbDestPath = Path::ChangeExtension(outputName, PlatformHelper::GetDebugExtension(outputName))
@@ -186,11 +184,11 @@ namespace dylan.NET.Cli
                 if !optimize andalso File::Exists(pdbPath) then
                     File::Delete(pdbDestPath)
                     File::Move(pdbPath, pdbDestPath)
-                    var pdb2 = pdbDestPath::Replace(".exe.mdb", ".pdb")::Replace(".dll.mdb", ".pdb")
-                    if pdbDestPath != pdb2 then
-                        File::Delete(pdb2)
+                    //var pdb2 = pdbDestPath::Replace(".exe.mdb", ".pdb")::Replace(".dll.mdb", ".pdb")
+                    //if pdbDestPath != pdb2 then
+                        //File::Delete(pdb2)
                         //File::Copy(pdbDestPath, pdb2)
-                    end if
+                    //end if
                 end if
             end if
 

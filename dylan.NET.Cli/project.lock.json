@@ -3,33 +3,31 @@
   "version": 2,
   "targets": {
     ".NETFramework,Version=v4.6.1": {
-      "dylan.NET/11.8.2.4": {
+      "dylan.NET/11.8.3.1": {
         "type": "package",
         "compile": {
-          "lib/net40/C5.dll": {},
-          "lib/net40/IKVM.Reflection.dll": {},
-          "lib/net40/Mono.CompilerServices.SymbolWriter.dll": {},
-          "lib/net40/System.Interactive.dll": {},
-          "lib/net40/dnc.dll": {},
-          "lib/net40/dnr.dll": {},
-          "lib/net40/dnu.dll": {},
-          "lib/net40/tokenizer.AST.dll": {},
-          "lib/net40/tokenizer.CodeGen.dll": {},
-          "lib/net40/tokenizer.Lexer.dll": {},
-          "lib/net40/tokenizer.Parser.dll": {}
+          "lib/net46/C5.dll": {},
+          "lib/net46/Managed.Reflection.dll": {},
+          "lib/net46/System.Interactive.dll": {},
+          "lib/net46/dnc.dll": {},
+          "lib/net46/dnr.dll": {},
+          "lib/net46/dnu.dll": {},
+          "lib/net46/tokenizer.AST.dll": {},
+          "lib/net46/tokenizer.CodeGen.dll": {},
+          "lib/net46/tokenizer.Lexer.dll": {},
+          "lib/net46/tokenizer.Parser.dll": {}
         },
         "runtime": {
-          "lib/net40/C5.dll": {},
-          "lib/net40/IKVM.Reflection.dll": {},
-          "lib/net40/Mono.CompilerServices.SymbolWriter.dll": {},
-          "lib/net40/System.Interactive.dll": {},
-          "lib/net40/dnc.dll": {},
-          "lib/net40/dnr.dll": {},
-          "lib/net40/dnu.dll": {},
-          "lib/net40/tokenizer.AST.dll": {},
-          "lib/net40/tokenizer.CodeGen.dll": {},
-          "lib/net40/tokenizer.Lexer.dll": {},
-          "lib/net40/tokenizer.Parser.dll": {}
+          "lib/net46/C5.dll": {},
+          "lib/net46/Managed.Reflection.dll": {},
+          "lib/net46/System.Interactive.dll": {},
+          "lib/net46/dnc.dll": {},
+          "lib/net46/dnr.dll": {},
+          "lib/net46/dnu.dll": {},
+          "lib/net46/tokenizer.AST.dll": {},
+          "lib/net46/tokenizer.CodeGen.dll": {},
+          "lib/net46/tokenizer.Lexer.dll": {},
+          "lib/net46/tokenizer.Parser.dll": {}
         }
       },
       "Microsoft.CodeAnalysis.Analyzers/1.1.0": {
@@ -545,7 +543,7 @@
           "lib/portable-net45+win8+wp8+wpa81/System.Collections.Immutable.dll": {}
         }
       },
-      "System.CommandLine/0.1.0-e160730-1": {
+      "System.CommandLine/0.1.0-e160806-1": {
         "type": "package",
         "dependencies": {
           "NETStandard.Library": "1.5.0-rc2-24027"
@@ -939,30 +937,28 @@
     }
   },
   "libraries": {
-    "dylan.NET/11.8.2.4": {
-      "sha512": "ZklpCUYBZYVTYeKVVZKjcaVRt69yeLf8gncVOy2gQuR/P5HC2SUM3gS7U9QuWtkR2UsWT35qQI3XIWLUbInD/A==",
+    "dylan.NET/11.8.3.1": {
+      "sha512": "yZHGK1+aZQ9PjkIJJXtMWZ5EAtiuNjJbRFyo82OfuQ8hl+jrQsN5BmhsXcVRSPbOIah/u7qenqlAUP+ZCjT01g==",
       "type": "package",
-      "path": "dylan.NET/11.8.2.4",
+      "path": "dylan.NET/11.8.3.1",
       "files": [
-        "dylan.NET.11.8.2.4.nupkg.sha512",
+        "dylan.NET.11.8.3.1.nupkg.sha512",
         "dylan.NET.nuspec",
-        "lib/net40/C5.dll",
-        "lib/net40/IKVM.Reflection.dll",
-        "lib/net40/Mono.CompilerServices.SymbolWriter.dll",
-        "lib/net40/System.Interactive.dll",
-        "lib/net40/dnc.dll",
-        "lib/net40/dnr.dll",
-        "lib/net40/dnu.dll",
-        "lib/net40/tokenizer.AST.dll",
-        "lib/net40/tokenizer.CodeGen.dll",
-        "lib/net40/tokenizer.Lexer.dll",
-        "lib/net40/tokenizer.Parser.dll",
+        "lib/net46/C5.dll",
+        "lib/net46/Managed.Reflection.dll",
+        "lib/net46/System.Interactive.dll",
+        "lib/net46/dnc.dll",
+        "lib/net46/dnr.dll",
+        "lib/net46/dnu.dll",
+        "lib/net46/tokenizer.AST.dll",
+        "lib/net46/tokenizer.CodeGen.dll",
+        "lib/net46/tokenizer.Lexer.dll",
+        "lib/net46/tokenizer.Parser.dll",
         "tools/C5.dll",
         "tools/Extra.Tasks.dll",
         "tools/Extra.tasks",
-        "tools/IKVM.Reflection.dll",
         "tools/INSTALL",
-        "tools/Mono.CompilerServices.SymbolWriter.dll",
+        "tools/Managed.Reflection.dll",
         "tools/System.Interactive.dll",
         "tools/Xamarin.Android.dylan.NET.targets",
         "tools/dnc.exe",
@@ -980,6 +976,7 @@
     "Microsoft.CodeAnalysis.Analyzers/1.1.0": {
       "sha512": "HS3iRWZKcUw/8eZ/08GXKY2Bn7xNzQPzf8gRPHGSowX7u7XXu9i9YEaBeBNKUXWfI7qjvT2zXtLUvbN0hds8vg==",
       "type": "package",
+      "path": "Microsoft.CodeAnalysis.Analyzers/1.1.0",
       "files": [
         "Microsoft.CodeAnalysis.Analyzers.1.1.0.nupkg.sha512",
         "Microsoft.CodeAnalysis.Analyzers.nuspec",
@@ -995,6 +992,7 @@
     "Microsoft.CodeAnalysis.Common/1.2.0-beta1-20160202-02": {
       "sha512": "NiotEstcb8ntWoBvxHFJud2JcQTJQPB3TTo82Em1EsTwvX7Jyr0l5kJeiRdapWGWNc4kXDIsRDQIJW1Cnz75uA==",
       "type": "package",
+      "path": "Microsoft.CodeAnalysis.Common/1.2.0-beta1-20160202-02",
       "files": [
         "Microsoft.CodeAnalysis.Common.1.2.0-beta1-20160202-02.nupkg.sha512",
         "Microsoft.CodeAnalysis.Common.nuspec",
@@ -1008,6 +1006,7 @@
     "Microsoft.CodeAnalysis.CSharp/1.2.0-beta1-20160202-02": {
       "sha512": "3uTFQjMDpmDPfsxFqBav9UVB0yrufIJUpjXWrueG6Tb788x6zAjornKBFklvSIa8b8/RBl6Rrnmmx/+XrqXw3Q==",
       "type": "package",
+      "path": "Microsoft.CodeAnalysis.CSharp/1.2.0-beta1-20160202-02",
       "files": [
         "Microsoft.CodeAnalysis.CSharp.1.2.0-beta1-20160202-02.nupkg.sha512",
         "Microsoft.CodeAnalysis.CSharp.nuspec",
@@ -1021,6 +1020,7 @@
     "Microsoft.DotNet.Cli.Utils/1.0.0": {
       "sha512": "PV5BUGwDClMatrf2+8IisO+pHA8KfPfFO6H5Abo/wQKU3oa106u5I4R9596lRavFZFUichzz2H7NYp5XtYG36g==",
       "type": "package",
+      "path": "Microsoft.DotNet.Cli.Utils/1.0.0",
       "files": [
         "Microsoft.DotNet.Cli.Utils.1.0.0.nupkg.sha512",
         "Microsoft.DotNet.Cli.Utils.nuspec",
@@ -1031,6 +1031,7 @@
     "Microsoft.DotNet.Compiler.Common/1.0.0": {
       "sha512": "de8B/lYJ3sPr8ZLwj+UuhN1bQfYv1tMxfEyeBtDlxRpt+uXxbxEJk0pf/nRakz6Vd+9CNb+CzcPgS1wQIL7Taw==",
       "type": "package",
+      "path": "Microsoft.DotNet.Compiler.Common/1.0.0",
       "files": [
         "Microsoft.DotNet.Compiler.Common.1.0.0.nupkg.sha512",
         "Microsoft.DotNet.Compiler.Common.nuspec",
@@ -1064,6 +1065,7 @@
     "Microsoft.DotNet.ProjectModel/1.0.0": {
       "sha512": "SPuxLQ+jxEkIVXFKpWnz5gL7IoOCZ3XG2a1wrNOBZrm8QMnHGmCFeZK9NALo6yUWlRXk3ltQgzxBvHn/sCCr3w==",
       "type": "package",
+      "path": "Microsoft.DotNet.ProjectModel/1.0.0",
       "files": [
         "Microsoft.DotNet.ProjectModel.1.0.0.nupkg.sha512",
         "Microsoft.DotNet.ProjectModel.nuspec",
@@ -1184,6 +1186,7 @@
     "Newtonsoft.Json/7.0.1": {
       "sha512": "q3V4KLetMLnt1gpAVWgtXnHjKs0UG/RalBc29u2ZKxd5t5Ze4JBL5WiiYIklJyK/5CRiIiNwigVQUo0FgbsuWA==",
       "type": "package",
+      "path": "Newtonsoft.Json/7.0.1",
       "files": [
         "Newtonsoft.Json.7.0.1.nupkg.sha512",
         "Newtonsoft.Json.nuspec",
@@ -1631,6 +1634,7 @@
     "System.Collections.Immutable/1.2.0-rc2-23925": {
       "sha512": "GjdnqQosko+zIHAWFdk14unlBW+sP2Xca990b56nqpwJxma97QjttAyeLdnd8MNsTKGlbF7U4wRAQu1g1qh+Hg==",
       "type": "package",
+      "path": "System.Collections.Immutable/1.2.0-rc2-23925",
       "files": [
         "System.Collections.Immutable.1.2.0-rc2-23925.nupkg.sha512",
         "System.Collections.Immutable.nuspec",
@@ -1642,12 +1646,12 @@
         "lib/portable-net45+win8+wp8+wpa81/System.Collections.Immutable.xml"
       ]
     },
-    "System.CommandLine/0.1.0-e160730-1": {
-      "sha512": "xp9M5J/ZbrypLN08oQRvOYkrISXL1k9OHgIR/o9AnXkeorGuSvz7Wvx2HMWSBaqK0mt9dCzMMGY0jACk3kXgRw==",
+    "System.CommandLine/0.1.0-e160806-1": {
+      "sha512": "8EA/mBRVxQxbJQlG0FUu6rpWFJCWK7LjNTFZzEbxo6Hq/i9W97Fh3fzfhGUJP2dH6DpFEjBZbO2PBWLC3URKWg==",
       "type": "package",
-      "path": "System.CommandLine/0.1.0-e160730-1",
+      "path": "System.CommandLine/0.1.0-e160806-1",
       "files": [
-        "System.CommandLine.0.1.0-e160730-1.nupkg.sha512",
+        "System.CommandLine.0.1.0-e160806-1.nupkg.sha512",
         "System.CommandLine.nuspec",
         "lib/net45/System.CommandLine.dll",
         "lib/netstandard1.5/System.CommandLine.dll"
@@ -2786,6 +2790,7 @@
     "System.Reflection.Metadata/1.3.0-rc2-23925": {
       "sha512": "XtAqnXDz+O0oBOys5uLuJhKP/iFo0iRQUayUNOptaRqZX2poy3bDDYu6vg3HYAIqD+EHVzDbSAguvIi/8QwvtQ==",
       "type": "package",
+      "path": "System.Reflection.Metadata/1.3.0-rc2-23925",
       "files": [
         "System.Reflection.Metadata.1.3.0-rc2-23925.nupkg.sha512",
         "System.Reflection.Metadata.nuspec",
@@ -3813,7 +3818,7 @@
       "System.CommandLine >= 0.1.0-*"
     ],
     ".NETFramework,Version=v4.6.1": [
-      "dylan.NET >= 11.8.2.4"
+      "dylan.NET >= 11.8.3.1"
     ]
   },
   "tools": {},
