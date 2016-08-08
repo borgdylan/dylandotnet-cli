@@ -3,7 +3,7 @@
   "version": 2,
   "targets": {
     ".NETFramework,Version=v4.6.1": {
-      "dylan.NET/11.8.3.1": {
+      "dylan.NET/11.8.3.2": {
         "type": "package",
         "compile": {
           "lib/net46/C5.dll": {},
@@ -937,12 +937,12 @@
     }
   },
   "libraries": {
-    "dylan.NET/11.8.3.1": {
-      "sha512": "yZHGK1+aZQ9PjkIJJXtMWZ5EAtiuNjJbRFyo82OfuQ8hl+jrQsN5BmhsXcVRSPbOIah/u7qenqlAUP+ZCjT01g==",
+    "dylan.NET/11.8.3.2": {
+      "sha512": "D8GmlIVfErArs+Xjqn9IWGgscWfAn9qb+YQJVNQ0bd4Wm0A2qs38vXgj2HUJF7UT7DibWiN1AlwakEIZ+T+geA==",
       "type": "package",
-      "path": "dylan.NET/11.8.3.1",
+      "path": "dylan.NET/11.8.3.2",
       "files": [
-        "dylan.NET.11.8.3.1.nupkg.sha512",
+        "dylan.NET.11.8.3.2.nupkg.sha512",
         "dylan.NET.nuspec",
         "lib/net46/C5.dll",
         "lib/net46/Managed.Reflection.dll",
@@ -3818,7 +3818,7 @@
       "System.CommandLine >= 0.1.0-*"
     ],
     ".NETFramework,Version=v4.6.1": [
-      "dylan.NET >= 11.8.3.1"
+      "dylan.NET >= 11.8.3.2"
     ]
   },
   "tools": {},
